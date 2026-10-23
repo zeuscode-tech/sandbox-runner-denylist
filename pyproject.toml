@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sandbox-runner-denylist"
+version = "1.0.0"
+description = "Capstone 26: subprocess guardrail with denylist and path jail"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Capstone implementation"}]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7,<9"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["."]
